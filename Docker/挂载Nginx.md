@@ -24,7 +24,7 @@ docker rm -f nginx_test
 ```
 ## 5、创建真实想要的容器并挂载
 ```sh
-docker run --name nginx -p 80:80 -v /data/nginx/conf/conf.d:/etc/nginx/conf.d -v /data/nginx/nginx.conf:/etc/nginx/nginx.conf -v /data/nginx/html:/usr/share/nginx/html -v /data/nginx/logs/:/var/log/nginx/ -d  nginx
+docker run --name nginx -p 80:80 -p 9000:9000 -v /data/nginx/conf/conf.d:/etc/nginx/conf.d -v /data/nginx/nginx.conf:/etc/nginx/nginx.conf -v /data/nginx/html:/usr/share/nginx/html -v /data/nginx/logs/:/var/log/nginx/ -d  nginx
 ```
 ## 6、后续在宿主机增加端口，需要重启容器
 ```sh
