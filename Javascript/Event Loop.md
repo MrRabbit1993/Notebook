@@ -13,7 +13,7 @@ js 单线程非阻塞脚本语言
 #### 宏任务：
 setInterval、setTimeout
 #### 微任务 (new Promise是同步)
-new Promise的then new MutationObserver
+new Promise的then、new MutationObserver
 ```js
 setTimeout(function () {
   console.log(1)
