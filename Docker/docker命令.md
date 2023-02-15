@@ -1,26 +1,26 @@
 ## 搜素镜像
 
-docker search nginx 
+docker search nginx
 
 ## 拉取镜像
 
-docker pull xxx 
+docker pull xxx
 
-docker pull nginx 
+docker pull nginx
 
-## 查看镜像dock
+## 查看镜像
 
 docker images
 
 ## 启动容器实例
 
-docker run --rm --name nginx -p 8080:80 -d nginx 
+docker run --rm --name nginx -p 8080:80 -d nginx
 
- --rm：容器终止运行后，自动删除容器文件。 
+ --rm：容器终止运行后，自动删除容器文件。
 
---name nginx：容器的名字叫做nginx,名字自己定义. 
+--name nginx：容器的名字叫做nginx,名字自己定义.
 
--p: 端口进行映射，将本地 8080 端口映射到容器内部的 80 端口 
+-p: 端口进行映射，将本地 8080 端口映射到容器内部的 80 端口
 
 -d：容器启动后，在后台运行
 
@@ -36,15 +36,15 @@ docker run --rm --name nginx -p 8080:80 -d nginx
 
 docker cp
 
-docker cp 358354f206fd:/etc/nginx/nginx.conf /home/nginx/conf/ 
+docker cp 358354f206fd:/etc/nginx/nginx.conf /home/nginx/conf/
 
 ## host主机与container映射
 
-docker run --rm -d -p 8888:80 --name nginx -v D:/dockerVirtual/nginx/html:/usr/share/nginx/html -v D:/dockerVirtual/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v D:/dockerVirtual/nginx/logs:/var/log/nginx nginx 
+docker run --rm -d -p 8888:80 --name nginx -v D:/dockerVirtual/nginx/html:/usr/share/nginx/html -v D:/dockerVirtual/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v D:/dockerVirtual/nginx/logs:/var/log/nginx nginx
 
 ## 删除镜像/实例
 
- docker rm 比如 docker rm nginx docker rm 20a
+docker rm 比如 docker rm nginx 、docker rm 20a
 
 docker rmi 123 //通过镜像Id删除镜像
 
@@ -52,13 +52,13 @@ docker rmi 123 //通过镜像Id删除镜像
 
 docker start
 
-docker start 12d 
+docker start 12d
 
 ## 停止容器
 
 docker stop
 
-docker stop 12d 
+docker stop 12d
 
 ## 进入容器
 
@@ -72,7 +72,7 @@ docker exec
 
 --user root 用root进入
 
-docker exec -it 12d /bin/bash 
+docker exec -it 12d /bin/bash
 
 ## 构建镜像
 docker build -t vuedocker .

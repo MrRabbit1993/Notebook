@@ -26,7 +26,14 @@ docker rm -f nginx_test
 ```sh
 docker run --name nginx -p 80:80 -p 9000:9000 -v /data/nginx/conf/conf.d:/etc/nginx/conf.d -v /data/nginx/nginx.conf:/etc/nginx/nginx.conf -v /data/nginx/html:/usr/share/nginx/html -v /data/nginx/logs/:/var/log/nginx/ -d  nginx
 ```
-## 6、后续在宿主机增加端口，需要重启容器
+## 6、后续在宿主机增加端口，需要重启一个容器
+```sh
+docker stop xxx
+docker rm xxx
+docker run
+```
+
+## 7、后续在宿主机修改Nginx代理之类,只需要重启即可
 ```sh
 docker restart xxxx
 ```
