@@ -3,14 +3,14 @@
 
 1、在组件库目录下，执行 sudo npm link
 
-例如：sudo npm link 
+例如：sudo npm link
 
-![IMAGE](resources/2873357D14B10441165636EA99CDC917.jpg =580x83)
+![IMAGE](./resources/2873357D14B10441165636EA99CDC917.jpg)
 
 在系统的node_module创建了一个组件（如1），映射到了组件库开发的文件目录（如2），形成了一个软连接
 
 2、在测试的项目目录下执行 npm link CFileUpload
-![IMAGE](resources/5751D05FF6CCC26BE01910962C2E7D0A.jpg =1442x273)
+![IMAGE](./resources/5751D05FF6CCC26BE01910962C2E7D0A.jpg)
 
 在测试项目的node_module下安装了一个组件（如1），映射到了系统的node_module中对应的组件（2），在根据软连接地址，映射到开发中组件实际的地址（3）、
 解除link
